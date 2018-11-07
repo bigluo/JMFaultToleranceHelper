@@ -19,15 +19,15 @@
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
         //__NSDictionary0 __NSDictionaryI 
-        Class targetClass = [NSDictionary class]; //NSClassFromString(@"__NSDictionaryI");
-        
-        [JMDataFaultToleranceHelper jm_swizzleClassMethod:@selector(dictionaryWithObject:forKey:) withMethod:@selector(jm_dictionaryWithObject:forKey:) withClass:targetClass];
-        
-        [JMDataFaultToleranceHelper jm_swizzleClassMethod:@selector(dictionaryWithObjectsAndKeys:) withMethod:@selector(jm_dictionaryWithObjectsAndKeys:) withClass:targetClass];
-        
-        [JMDataFaultToleranceHelper jm_swizzleClassMethod:@selector(dictionaryWithObjects:forKeys:) withMethod:@selector(jm_dictionaryWithObjects:forKeys:) withClass:targetClass];
-        
-        [JMDataFaultToleranceHelper jm_swizzleInstanceMethod:@selector(initWithObjects:forKeys:count:) withMethod:@selector(jm_initWithObjects:forKeys:count:) withClass:NSClassFromString(@"__NSPlaceholderDictionary")];
+//        Class targetClass = NSClassFromString(@"__NSPlaceholderDictionary");
+//
+//        [JMDataFaultToleranceHelper jm_swizzleClassMethod:@selector(dictionaryWithObject:forKey:) withMethod:@selector(jm_dictionaryWithObject:forKey:) withClass:targetClass];
+//
+//        [JMDataFaultToleranceHelper jm_swizzleClassMethod:@selector(dictionaryWithObjectsAndKeys:) withMethod:@selector(jm_dictionaryWithObjectsAndKeys:) withClass:targetClass];
+//
+//        [JMDataFaultToleranceHelper jm_swizzleClassMethod:@selector(dictionaryWithObjects:forKeys:) withMethod:@selector(jm_dictionaryWithObjects:forKeys:) withClass:targetClass];
+//
+//        [JMDataFaultToleranceHelper jm_swizzleInstanceMethod:@selector(initWithObjects:forKeys:count:) withMethod:@selector(jm_initWithObjects:forKeys:count:) withClass:NSClassFromString(@"__NSPlaceholderDictionary")];
     });
     
 }

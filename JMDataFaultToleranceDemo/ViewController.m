@@ -17,6 +17,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
     [self demo0];
     [self demo1];
     [self demo2];
@@ -57,9 +58,12 @@
 
 /**NSDictionary demo*/
 - (void)demo2{
-    NSDictionary *dict = [NSDictionary dictionary];
-    NSLog(@"NSDictionary类型：%@",[dict class]);
-    NSLog(@"NSDictionary类型：%@",[NSDictionary class]);
+    NSDictionary *dict = @{@"key1":@"2",@"key2":@"4",@"key3":@"哈哈"};
+    NSInteger a = [dict jm_integerForKey:@"key1"];
+    NSNumber *b = [dict jm_numberForKey:@"key2"];
+    NSInteger c = [dict jm_integerForKey:@"key3"];
+    NSString *d = [dict jm_stringForKey:@"key3"];
+    
 //    NSDictionary dictionaryWithObjectsAndKeys:<#(nonnull id), ...#>, nil
 }
 
@@ -69,6 +73,8 @@
     NSLog(@"NSMutableDictionary类型：%@",[dictM class]);
     NSLog(@"%@",[dictM class]);
     [dictM setObject:nil forKey:@"1"];
+    
+
     //    NSString *str = [NSString stringWithFormat:@"123"];
     //    id obj = YES;
     //    [dictM setObject:obj forKey:@"1"];

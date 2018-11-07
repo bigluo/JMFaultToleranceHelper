@@ -25,6 +25,7 @@ typedef NS_ENUM(NSUInteger,JMDataFaultType){
 
 
 @interface JMDataFaultToleranceHelper : NSObject
+
 /**
  *  交换类方法
  *

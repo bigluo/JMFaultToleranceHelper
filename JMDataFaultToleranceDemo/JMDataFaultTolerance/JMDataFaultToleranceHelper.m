@@ -10,6 +10,9 @@
 #import <objc/runtime.h>
 
 @implementation JMDataFaultToleranceHelper
+
+
+
 + (void)jm_swizzleInstanceMethod:(SEL)originSelector
                      withMethod:(SEL)swizzledSelector
                       withClass:(Class)targetClass{

@@ -7,8 +7,7 @@
 //
 
 #import "NSMutableString+JMDataFaultTolerance.h"
-#import "
-.h"
+#import "JMDataFaultTolerance.h"
 @implementation NSMutableString (JMDataFaultTolerance)
 
 + (void)load{
